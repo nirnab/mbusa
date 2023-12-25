@@ -89,11 +89,11 @@
 							"notebookPath": "/Users/nirnab.chowdhury@nagarro.com/notebook1",
 							"baseParameters": {
 								"path": {
-									"value": "@triggerBody().folderPath",
+									"value": "@pipeline().parameters.path",
 									"type": "Expression"
 								},
 								"file": {
-									"value": "@triggerBody().fileName",
+									"value": "@pipeline().parameters.file",
 									"type": "Expression"
 								}
 							}
@@ -106,6 +106,16 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"path": {
+						"type": "string",
+						"defaultValue": "@triggerBody().folderPath"
+					},
+					"file": {
+						"type": "string",
+						"defaultValue": "@triggerBody().fileName"
+					}
 				},
 				"annotations": []
 			},
