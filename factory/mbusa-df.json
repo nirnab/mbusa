@@ -1,0 +1,9 @@
+{
+	"name": "mbusa-df",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8f40ae3f-7276-4e97-87b2-4f7b3649ced1",
+		"tenantId": "a45fe71a-f480-4e42-ad5e-aff33165aa35"
+	}
+}
