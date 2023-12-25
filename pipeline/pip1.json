@@ -17,8 +17,14 @@
 				"typeProperties": {
 					"notebookPath": "/Users/nirnab.chowdhury@nagarro.com/notebook1",
 					"baseParameters": {
-						"path": "@triggerBody().folderPath",
-						"file": "@triggerBody().fileName"
+						"path": {
+							"value": "@triggerBody().folderPath",
+							"type": "Expression"
+						},
+						"file": {
+							"value": "@triggerBody().fileName",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
@@ -27,6 +33,16 @@
 				}
 			}
 		],
+		"parameters": {
+			"path": {
+				"type": "string",
+				"defaultValue": "@triggerBody().folderPath"
+			},
+			"file": {
+				"type": "string",
+				"defaultValue": "@triggerBody().fileName"
+			}
+		},
 		"annotations": []
 	}
 }
