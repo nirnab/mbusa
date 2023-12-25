@@ -18,11 +18,11 @@
 					"notebookPath": "/Users/nirnab.chowdhury@nagarro.com/notebook1",
 					"baseParameters": {
 						"path": {
-							"value": "@triggerBody().folderPath",
+							"value": "@pipeline().parameters.path",
 							"type": "Expression"
 						},
 						"file": {
-							"value": "@triggerBody().fileName",
+							"value": "@pipeline().parameters.file",
 							"type": "Expression"
 						}
 					}
