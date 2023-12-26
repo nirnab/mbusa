@@ -23,6 +23,14 @@
 			"type": "string",
 			"defaultValue": "1219-043742-58dt6qj2"
 		},
+		"triggeradls_properties_pip1_parameters_path": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"triggeradls_properties_pip1_parameters_file": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
 		"triggeradls_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/b248d6aa-e733-4e20-87d9-e427e42dfab4/resourceGroups/mbusa/providers/Microsoft.Storage/storageAccounts/mbusaadls"
@@ -65,6 +73,12 @@
 					},
 					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
+					},
+					"triggeradls_properties_pip1_parameters_path": {
+						"value": "[parameters('triggeradls_properties_pip1_parameters_path')]"
+					},
+					"triggeradls_properties_pip1_parameters_file": {
+						"value": "[parameters('triggeradls_properties_pip1_parameters_file')]"
 					},
 					"triggeradls_properties_typeProperties_scope": {
 						"value": "[parameters('triggeradls_properties_typeProperties_scope')]"

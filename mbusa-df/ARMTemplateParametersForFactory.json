@@ -17,6 +17,12 @@
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"value": "1219-043742-58dt6qj2"
 		},
+		"triggeradls_properties_pip1_parameters_path": {
+			"value": "@triggerBody().folderPath"
+		},
+		"triggeradls_properties_pip1_parameters_file": {
+			"value": "@triggerBody().fileName"
+		},
 		"triggeradls_properties_typeProperties_scope": {
 			"value": "/subscriptions/b248d6aa-e733-4e20-87d9-e427e42dfab4/resourceGroups/mbusa/providers/Microsoft.Storage/storageAccounts/mbusaadls"
 		}

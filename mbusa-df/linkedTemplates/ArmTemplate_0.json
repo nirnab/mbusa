@@ -23,6 +23,14 @@
 			"type": "string",
 			"defaultValue": "1219-043742-58dt6qj2"
 		},
+		"triggeradls_properties_pip1_parameters_path": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"triggeradls_properties_pip1_parameters_file": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
 		"triggeradls_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/b248d6aa-e733-4e20-87d9-e427e42dfab4/resourceGroups/mbusa/providers/Microsoft.Storage/storageAccounts/mbusaadls"
@@ -109,12 +117,10 @@
 				},
 				"parameters": {
 					"path": {
-						"type": "string",
-						"defaultValue": "@triggerBody().folderPath"
+						"type": "string"
 					},
 					"file": {
-						"type": "string",
-						"defaultValue": "@triggerBody().fileName"
+						"type": "string"
 					}
 				},
 				"annotations": []
@@ -136,7 +142,10 @@
 							"referenceName": "pip1",
 							"type": "PipelineReference"
 						},
-						"parameters": {}
+						"parameters": {
+							"path": "[parameters('triggeradls_properties_pip1_parameters_path')]",
+							"file": "[parameters('triggeradls_properties_pip1_parameters_file')]"
+						}
 					}
 				],
 				"type": "BlobEventsTrigger",
