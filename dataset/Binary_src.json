@@ -1,0 +1,19 @@
+{
+	"name": "Binary_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "compress_1.zip",
+				"folderPath": "zip",
+				"fileSystem": "input"
+			}
+		}
+	}
+}
